@@ -16,7 +16,7 @@ $skema = mysql_query("SELECT * from tb_skema");
 		<label>Nama <input type="text" name="nama" /></label>
         <label>Tanggal Lahir <input type="date" name="tgl_lahir" /></label>
 		<label>No HP<input type="text" name="hp" /></label>
-        <label>Email<input type="text" name="email" /></label>
+        <label>Email<input type="email" name="email" /></label>
 		<label>Organisasi<input type="text" name="organisasi" /></label>
         <label>Lokasi
           <select name="lokasi">
@@ -41,7 +41,7 @@ $skema = mysql_query("SELECT * from tb_skema");
 		<label>Tanggal Terbit Sertifikat<input type="date" name="terbit" value="<?php echo $sql2['tgl_terbit'] ; ?>"/></label>
     </div>
     <div class="button-section">
-     <input type="submit" name="Sign Up" /> <a href="tampil_peserta.php" ><input type="submit" value="Kembali" /></a>
+     <input type="submit" name="Sign Up" /> <a href="tampil_peserta.php" ><input type="button" value="Kembali" /></a>
      <span class="privacy-policy">
      You agree to our Terms and Policy. 
      </span>

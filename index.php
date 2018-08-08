@@ -1,3 +1,3 @@
 <?php 
-	header("location:med.php?mod=peserta");
+	header("location:tampil_peserta.php");
 ?>

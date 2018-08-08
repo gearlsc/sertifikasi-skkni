@@ -13,14 +13,22 @@ $lokasi = mysql_query("SELECT * from tb_lokasi");
 <div class="form-style-10">
 <h1>Edit Peserta </h1>
 <form method="post" action="proses_edit_peserta.php?kode=<?php echo $sql2['nik'];?>">
-    
+    <input type="hidden" name="niklama" value="<?php echo $sql2['nik'] ; ?>">
     
     <div class="inner-wrap">
-        <label>NIK <input type="text" name="nik" value="<?php echo $sql2['nik'] ; ?>" required/></label>
-		<label>Nama <input type="text" name="nama" value="<?php echo $sql2['nama'] ; ?>" required/></label>
+
+        <label>
+            NIK :
+            <input type="text" name="nik" value="<?php echo $sql2['nik'] ; ?>" required/>
+        </label>
+		<label>
+            Nama :
+            <input type="text" name="nama" value="<?php echo $sql2['nama'] ; ?>" required/>
+        </label>
+		<label>Alamat <input type="text" name="alamat" value="<?php echo $sql2['alamat'] ; ?>" required/></label>
         <label>Tanggal Lahir <input type="date" name="tgl_lahir" value="<?php echo $sql2['tgl_lahir'] ; ?>" required/></label>
 		<label>No HP<input type="text" name="hp" value="<?php echo $sql2['hp'] ; ?>" required/></label>
-        <label>Email<input type="text" name="email" value="<?php echo $sql2['email'] ; ?>" required/></label>
+        <label>Email<input type="email" name="email" value="<?php echo $sql2['email'] ; ?>" required/></label>
 		<label>Organisasi<input type="text" name="organisasi" value="<?php echo $sql2['organisasi'] ; ?>" required/></label>
         <label>Lokasi
           <select name="lokasi">

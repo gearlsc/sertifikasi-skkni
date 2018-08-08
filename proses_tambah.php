@@ -17,16 +17,24 @@ $query = mysql_fetch_array(mysql_query("SELECT * FROM tb_peserta WHERE nik='$nik
 if($query){
 		echo "<script> alert('nik telah didaftarkan');location ='tambah_peserta.php' </script>";
 	}
-	
+elseif (!is_numeric($hp)) {
+		echo "<script>
+ 			alert('Nomor hp harus nomor'); 
+ 			window.history.back()
+ 		</script>";
+ 	} 
 else{
 	$sql = "insert into tb_peserta VALUES('0','$nik',  '$skema', '$lokasi', '$nama','$tgl_lahir', '$hp', '$email', '$organisasi','BERKOMPETENSI', '$terbit')";
-	}
 	
-$hasil = mysql_query($sql);	
+	$hasil = mysql_query($sql);	
 if ($hasil){
 	echo "<script> alert('Data ditambah'); location = 'tampil_peserta.php'; </script>";
 	}
 else{
 	echo "<script> alert('Data Gagal Di SImpan'); location = 'tampil_peserta.php'; </script>";
 	}	
+
+}
+	
+
 ?>
